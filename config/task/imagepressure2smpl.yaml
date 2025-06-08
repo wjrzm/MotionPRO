@@ -1,0 +1,28 @@
+name: imagepressure2smpl
+loss_name: init
+
+gpu: 0,1,2,3
+
+train_data_dir: /data1/shenghao/MotionPRO/
+eval_data_dir: /data1/shenghao/MotionPRO/0729/csy/
+smpl_mean_params: data/smpl/smpl_mean_params.npz
+smpl_model: data/smpl/SMPL_NEUTRAL.pkl
+output_dir: data/debug
+
+checkpoint_dir: /data1/shenghao/data/imagepressure2smpl/checkpoint
+checkpoint_path: None
+result_dir: '/data1/shenghao/data/imagepressure2smpl/result'
+
+epochs: 1000
+batch_size: 64
+learning_rate: 0.00005
+train_continue: False
+scheduler_patience: 5
+
+window_length: 20
+
+lamda_theta: 1
+lamda_trans: 1
+lamda_joint: 10
+lamda_2d_joint: 5
+lamda_foot: 5

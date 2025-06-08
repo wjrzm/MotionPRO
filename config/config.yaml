@@ -1,0 +1,8 @@
+defaults:
+    - _self_
+    - task: imagepressure2smpl
+    
+# hydra parameters
+hydra:
+  run:
+    dir: log/${hydra.job.name}/${now:%Y-%m-%d_%H-%M-%S}
