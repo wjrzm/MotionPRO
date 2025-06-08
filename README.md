@@ -90,10 +90,11 @@ python -m app.train_frappe
 If you find this code useful, please consider citing:
 
 ```
-@article{ren2025motionpro,
+@inproceedings{ren2025motionpro,
   title={MotionPRO: Exploring the Role of Pressure in Human MoCap and Beyond},
   author={Ren, Shenghao and Lu, Yi and Huang, Jiayi and Zhao, Jiayi and Zhang, He and Yu, Tao and Shen, Qiu and Cao, Xun},
-  journal={arXiv preprint arXiv:2504.05046},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={27760--27770},
   year={2025}
 }
 ```
