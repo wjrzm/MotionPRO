@@ -13,20 +13,12 @@ class ImagePressureDataset(Dataset):
         self.dtype = torch.float32
 
         if self.mode == 'train':
-            base_dir = cfg['task']['train_data_dir']
-            self.feature_files = []
-            
-            for dir in base_dir:
-                feature_files = findAllFilesWithSpecifiedName(dir, 'feature_hrnet.pth')
-                self.feature_files.extend(feature_files)
-
+            self.feature_files = findAllFilesWithSpecifiedName(cfg['task']['train_data_dir'], 'feature_hrnet.pth')
             print(self.feature_files)
 
-            
         elif self.mode == 'eval':
-            base_dir = cfg['task']['eval_data_dir']
-
-            self.feature_files = findAllFilesWithSpecifiedName(base_dir, 'feature_hrnet.pth')
+            self.feature_files = findAllFilesWithSpecifiedName(cfg['task']['eval_data_dir'], 'feature_hrnet.pth')
+            print(self.feature_files)
 
         self.gt_kps = []
         self.gt_contact = []
