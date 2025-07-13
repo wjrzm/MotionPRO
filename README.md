@@ -59,6 +59,8 @@ Install packages with `pip`
 
 ## Data preparation
 
+MotionPRO Dataset is available at https://shenqiu.njucite.cn/download
+
 1. Generate bounding box for each image: 
 ```bash
   python -m lib.util.gen_bbox
